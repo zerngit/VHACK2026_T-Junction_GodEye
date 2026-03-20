@@ -1,10 +1,11 @@
 <div align="center">
   <!-- Banner -->
-  <img width="1370" height="768" alt="banner" src="https://github.com/user-attachments/assets/99c44cb8-e583-4ea7-9270-71a631656a54" />
+  ![banner](https://github.com/user-attachments/assets/ca469b61-dcc1-4663-98c8-66f5bce57996)
 
-  
+
   <!-- Logo/Title -->
-  <img src="image/logo.png" alt="Logo" width="200" height="auto">
+  ![logo](https://github.com/user-attachments/assets/fdaeb35c-d5b7-40ef-b78c-b57b61a66841)
+
   <h1>MESA-Drone-Swarm-Rescue-Simulation</h1>
   
   <!-- GitHub Stack Tags -->
@@ -44,7 +45,8 @@ During real-world disaster responses, several key challenges emerge that traditi
    * **Solution:** We use a **Commander + Operator structure**. By adding an Operator agent utilizing **Langchain and LangGraph**, we fully utilize the assigned technology mentioned in the case studies booklet (covering AI implementation, strategy, and configuration). A **Qwen 3-14B** Commander handles high-level strategic reasoning and sectoring, while a lightweight **Qwen 2.5 3B** Operator executes rapid MCP tool calls. Both models are able to run locally via Ollama, ensuring functionality under zero Internet connectivity.
 
    <div align="center">
-  <img src="image/architecture_light2.png" alt="Drone Swarm Simulation" width="800">
+  ![architecture_light2](https://github.com/user-attachments/assets/a485593c-b6e3-488b-9162-067c29469abe)
+
    </div>
 
    *(Note: Our architecture fully decouples simulation logic from LLM cognition, utilizing a structured LangGraph-based operator node for reliable agent execution.)*
@@ -215,7 +217,8 @@ Our market potential operates on a powerful dual-flywheel model: **funding life-
    Per-drone or per-fleet licensing models for our proprietary Agentic Intelligence Layer (the Commander + Operator architecture), designed for commercial and industrial drone operators.
 
 <div align="center">
-  <img src="image/Market.png" alt="Drone Swarm Simulation" width="800">
+  ![Market](https://github.com/user-attachments/assets/b7581bc6-f9e6-483c-b3f7-6baeae13756a)
+
 </div>
 
 ## 2. Impact & Social Value
@@ -251,7 +254,8 @@ This isn't just a tech demo—**it's about saving lives.** Our solution directly
 - **Long-term viability:** Unlike donor-dependent NGOs, our model ensures the software survives indefinitely, scales globally, and stays free when lives are at stake.
 
 <div align="center">
-  <img src="image/Sustainability.png" alt="Drone Swarm Simulation" width="800">
+  ![Sustainability](https://github.com/user-attachments/assets/e6af90f1-e246-436a-b32a-ddf599cacec8)
+
 </div>
 
 ---
