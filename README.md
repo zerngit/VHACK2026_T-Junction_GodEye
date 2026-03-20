@@ -39,11 +39,15 @@ Rather than relying on classic hardcoded pathfinding algorithms, our project uti
 
 During real-world disaster responses, several key challenges emerge that traditional software or single-agent solutions fail to address. We have tackled these head-on:
 
-> *" 🌟 What makes us stands out? Here are our KEY INNOVATIONS:"*
+> *" 🌟 What makes us stand out? Here are our KEY INNOVATIONS:"*
 
 ## 1. **COMMANDER-OPERATOR DUAL CORE ARCHITECTURE** ⚡
    * **Problem:** Single command agents suffer from computing inefficiency and waste tokens when attempting to handle complex, specialized tasks.
    * **Solution:** We use a **Commander + Operator structure**. By adding an Operator agent utilizing **Langchain and LangGraph**, we fully utilize the assigned technology mentioned in the case studies booklet (covering AI implementation, strategy, and configuration). A **Qwen 3-14B** Commander handles high-level strategic reasoning and sectoring, while a lightweight **Qwen 2.5 3B** Operator executes rapid MCP tool calls. Both models are able to run locally via Ollama, ensuring functionality under zero Internet connectivity.
+  * **Edge Deployment Readiness (Local Inference):**
+    - **Target class A (portable edge):** NVIDIA Jetson Orin class devices (e.g., Orin NX / AGX Orin) for offline Operator-level tactical inference and MCP tool routing.
+    - **Target class B (field command node):** x86 edge workstation (16+ CPU threads, 32-64 GB RAM, NVIDIA RTX class GPU) for Commander-level reasoning and fleet-level orchestration.
+    - **Fallback mode:** If edge GPU throughput drops, we degrade to deterministic tool policies and keep MCP mission tools online, so search does not halt.
 
    <div align="center">
   <img width="2726" height="1568" alt="architecture_light2" src="https://github.com/user-attachments/assets/d54945fd-4e74-4e24-8c40-d9642acf7552" />
@@ -54,7 +58,7 @@ During real-world disaster responses, several key challenges emerge that traditi
 
 ## 2. **"SWARM VOTING" MECHANISM** 🐝❎
    * **Problem:** Large language models can hallucinate, sometimes missing assigned tasks. When evaluating performance, we found high drone wait counts per tick (idle time) as evidence.
-   * **Solution:** An innovative **Swarm Voting Mechanism** (our key innovation) to react and resume the mission if the Commander Agent hallucinate and significantly reduce the impact of hallucinations.
+  * **Solution:** An innovative **Swarm Voting Mechanism** (our key innovation) reacts and resumes the mission if the Commander Agent hallucinates, significantly reducing mission disruption.
 
 <div align="center">
   <img src="image/vote.png" alt="Drone Swarm Simulation" width="800">
@@ -62,7 +66,7 @@ During real-world disaster responses, several key challenges emerge that traditi
 
 ## 3. **OBSTACLES AVOIDING** 🚧
    * **Problem:** Unforeseen obstacles, such as fallen trees or collapsed buildings, block standard paths.
-   * **Solution:** Our drones feature a dynamic rerouting **Bypass Obstacle** mechanism (an additional feature we've integrated directly into the agent behavior), primarily using diagnoal and sidestepping movement.
+  * **Solution:** Our drones feature a dynamic rerouting **Bypass Obstacle** mechanism (an additional feature integrated directly into agent behavior), primarily using diagonal and sidestepping movement.
 
 <div align="center">
   <img src="image/gif obstacle.gif" alt="Drone Swarm Simulation" width="600">
@@ -113,10 +117,20 @@ Our system transforms Palu City's real-world map data through a **Signal Verific
   
   This mimics real SAR equipment that requires multi-source confirmation before declaring a detection.
 
+- **Non-Human Heat Rejection (Fire / Asphalt / Debris):**
+  - A high thermal reading alone is insufficient for a rescue confirmation.
+  - `verify_signature()` requires spatial life-sign evidence (survivor entity in Moore neighborhood radius 2) before status becomes **CONFIRMED**.
+  - Heat-only detections without life-sign proximity are forced to **FALSE_POSITIVE**, which suppresses common disaster-scene noise like sun-heated roads, metal debris, and fire hotspots that are thermally bright but non-human.
+
 - **Scenario Variability & Constraint Enforcement:** 
   - Scenario configs (`SCENARIOS`) encode seeded randomization (seeds: 1337, 2026, 7, 42, etc.), ensuring reproducibility while capturing real-world map diversity (Palu City, hotspot clusters, scattered perimeters, building-dense urban).
   - Survivor placement is clamped, de-duplicated, and obstacle-aware to prevent invalid data states.
   - Obstacle routing in `move_to()` enforces real building constraints (high/low height categories) so pathfinding can't hallucinate through walls.
+
+- **Data Scarcity & Map Drift Strategy (When GIS is Outdated):**
+  - If pre-disaster GIS/satellite layers are stale (e.g., landslide or collapse changed routes), we prioritize **live scan-derived map certainty** over static priors.
+  - The fleet continuously updates mission state through MCP (`get_mission_state`) and shifts assignment to least-covered sectors, reducing dependence on outdated base maps.
+  - Obstacle-aware movement (`move_to()` with high-building blocking + sidestep/diagonal bypass) provides online adaptation when topology differs from preloaded scenario assumptions.
 
 
 ## 5. Real-Time Tool Discovery 🔨
@@ -130,14 +144,28 @@ Our system transforms Palu City's real-world map data through a **Signal Verific
 We built a robust pipeline that continuously evaluates the efficacy and intelligence of the swarm during the simulation. 
 
 **Train/Test Split Key Findings (Different Maps):**
-- Training success rate reached **75%**.
-- Testing success rate reached **60%**.
+- Training success rate reached **50%**.
+- Testing success rate reached **100%**.
 - Overall map coverage stayed in the **~70%** range.
 - Survivor detection remained strong, with testing scenario detection reaching **100%**.
 
+**Root-Cause Analysis of the Underperforming Run (Rigorous Breakdown):**
+- The weakest run was **C: Perimeter scattered** (train split):
+  - survivor detection dropped to **75%** (9/12),
+  - coverage settled at **72.66%**,
+  - average battery ended at **0.75%**.
+- This scenario pushes drones to long-perimeter traversals, increasing travel overhead and battery burn before all survivor clusters are revisited.
+- In contrast, **D: City with high buildings** completed quickly in this split snapshot (final tick 9), suggesting scenario geometry and termination timing can dominate split-level success when run count is low.
+- Action item to close variance: increase `runs_per_scenario`, then rebalance sector assignment and battery-recall thresholds using per-scenario error slices.
+
+**Benchmark Against Manual Search (Current Status):**
+- Autonomous benchmark currently reports **~40 minutes for 99.7% area coverage** in our simulation workflow.
+- Human-piloted baseline for the same map and survivor layout is a **pending field benchmark** (to be measured under matched area, crew size, and weather constraints).
+- Our evaluation pipeline is already structured to store this comparison as a side-by-side KPI once manual trial logs are captured.
+
 **Benchmark Metrics (Live Data Feed):**
 * **A) Mission Efficacy**
-  * **First Human Contact (FHC) time:** Measuring speed of initial victim discovery. **(Score: 1 ticks / 246.28s)**
+  * **First Human Contact (FHC) time:** Measuring speed of initial victim discovery. **(Score: 2 ticks / 24.91s)**
   * **Area Coverage / Rate:** Percentage of the environment successfully mapped. **(Score: 99.7% Total / 2.8497 Rate)**
   * **Survivor Detected Rate:** Proportion of total survivors located by the drone swarm. **(Score: 12/12 or 100%)**
 
@@ -210,6 +238,16 @@ Our market potential operates on a powerful dual-flywheel model: **funding life-
 * 🏗️ **B2B Infrastructure Licensing:**
   The exact same AI swarm orchestration will be licensed to enterprise giants like **Petronas** and **Edotco** for hazardous infrastructure inspections, remote thermal scanning, and automated maintenance tracking.
 
+**Partnership & Licensing Logic (Formalized):**
+
+| Sector | Primary Use Case | Licensing Unit | Current Status |
+|---|---|---|---|
+| Energy / Utilities | Thermal anomaly inspection, flare stack checks | Per-fleet annual license + deployment support | Target outreach pipeline |
+| Telecom Towers | Tower inspection and maintenance scan automation | Per-site + per-drone usage tier | Target outreach pipeline |
+| Agriculture | Crop stress and hotspot monitoring | Per-region seasonal package | Target outreach pipeline |
+
+> We are currently in pre-LOI validation phase; outreach evidence and pilot MoU updates will be published in this README as they are formalized.
+
 **Scalable Business Model:**
 
 1. **Platform as a Service (PaaS):** 
@@ -233,7 +271,8 @@ This isn't just a tech demo—**it's about saving lives.** Our solution directly
 
 **⚙️ SDG 9: Industry, Innovation & Infrastructure**
 - **Software as Infrastructure:** We prove that AI swarm orchestration is critical infrastructure, not luxury.
-- **Sovereign AI resilience:** Our architecture doesn't rely on foreign cloud services during blackouts. Drones operate on local MCP protocol with zero external dependencies—critical when the internet goes down.
+- **Sovereign AI resilience:** Our architecture does not rely on foreign cloud services during blackouts. Drones operate on local MCP protocol with zero external dependencies—critical when connectivity fails.
+- **Data privacy & national security:** Local inference keeps sensitive mission telemetry, coordinates, and victim-location signals in-country, reducing cross-border data exposure risks for agencies like NADMA.
 - Designed for deployment in ASEAN and other regions where infrastructure bottlenecks are severe.
 
 **🌍 Geographic Equity & Accessibility**
@@ -247,9 +286,17 @@ This isn't just a tech demo—**it's about saving lives.** Our solution directly
 - **95% carbon reduction vs. helicopters:** Our AI-optimized pathing maximizes battery life and minimizes energy waste, making drone swarms drastically more sustainable than traditional aerial rescue.
 - **Smart energy allocation:** The Commander→Operator architecture ensures every tool call (move, scan, charge) is strategically planned, eliminating wasteful redundancy and frivolous movements.
 - **Renewable-ready:** Designed to integrate with solar-charged dock stations, enabling indefinite autonomous operations in remote areas without infrastructure.
+- **Hardware sustainability in remote zones:** We prioritize modular drone components (battery, propeller, arm, ESC, camera) for fast field replacement and reduced e-waste from full-unit swaps.
+
+**AI Maintenance & Retraining Strategy (Year-2 Field Operations):**
+- **Step 1 — Data Capture:** collect mission traces (`langgraph_tick_trace_log.jsonl`), tool-call outcomes, and failure tags from pilot deployments.
+- **Step 2 — Curation:** build a labeled replay dataset of edge cases (low battery conflicts, obstacle bottlenecks, false-positive heat zones, delayed detections).
+- **Step 3 — Offline Validation:** run split-evaluation replay before model promotion; candidate updates must improve detection/coverage while preserving tool-call accuracy.
+- **Step 4 — Controlled Rollout:** deploy updated Commander/Operator models in canary missions first, then promote to broad operations after KPI gates pass.
+- **Step 5 — Continuous Drift Monitoring:** track geography-specific degradation and retrain on new terrain/disaster signatures to keep performance stable over time.
 
 **Financial Sustainability: Commercial-to-Humanitarian Subsidization (C2H)**
-- **Cross-subsidy model:** B2B commercial revenue from industrial inspections (Petronas, Edotco, energy sector) **fully funds** our R&D and core platform development.
+- **Cross-subsidy model:** B2B commercial revenue from industrial inspections (Petronas, Edotco, and the energy sector) **fully funds** our R&D and core platform development.
 - **Zero-cost government licensing:** Government disaster relief agencies (NADMA, FEMA, Red Cross) receive our full enterprise software suite at **zero licensing cost**—because profit comes from commercial clients, not from saving lives.
 - **Self-sustaining ecosystem:** This inverts the typical CapEx bottleneck: profit drives innovation, while humanitarian missions remain permanently affordable and scalable.
 - **Long-term viability:** Unlike donor-dependent NGOs, our model ensures the software survives indefinitely, scales globally, and stays free when lives are at stake.
