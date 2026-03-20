@@ -218,8 +218,8 @@ Our market potential operates on a powerful dual-flywheel model: **funding life-
    Per-drone or per-fleet licensing models for our proprietary Agentic Intelligence Layer (the Commander + Operator architecture), designed for commercial and industrial drone operators.
 
 <div align="center">
-  ![Market](https://github.com/user-attachments/assets/b7581bc6-f9e6-483c-b3f7-6baeae13756a)
-
+  <img width="2816" height="1536" alt="Market" src="https://github.com/user-attachments/assets/85cfbb5b-a580-4ed5-a07b-4b6f8e8cf687" />
+  
 </div>
 
 ## 2. Impact & Social Value
@@ -255,7 +255,7 @@ This isn't just a tech demo—**it's about saving lives.** Our solution directly
 - **Long-term viability:** Unlike donor-dependent NGOs, our model ensures the software survives indefinitely, scales globally, and stays free when lives are at stake.
 
 <div align="center">
-  ![Sustainability](https://github.com/user-attachments/assets/e6af90f1-e246-436a-b32a-ddf599cacec8)
+  <img width="2752" height="1536" alt="Sustainability" src="https://github.com/user-attachments/assets/411a2fc9-129a-4e1b-9269-617711b2f554" />
 
 </div>
 
