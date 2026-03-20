@@ -1,6 +1,7 @@
 <div align="center">
   <!-- Banner -->
-  <img width="1370" height="768" alt="banner" src="https://github.com/user-attachments/assets/02c807f4-20ec-49c6-8551-54a45a0932a6" />
+  <img width="1370" height="768" alt="banner" src="https://github.com/user-attachments/assets/99c44cb8-e583-4ea7-9270-71a631656a54" />
+
   
   <!-- Logo/Title -->
   <img src="image/logo.png" alt="Logo" width="200" height="auto">
