@@ -46,7 +46,7 @@ During real-world disaster responses, several key challenges emerge that traditi
    * **Solution:** We use a **Commander + Operator structure**. By adding an Operator agent utilizing **Langchain and LangGraph**, we fully utilize the assigned technology mentioned in the case studies booklet (covering AI implementation, strategy, and configuration). A **Qwen 3-14B** Commander handles high-level strategic reasoning and sectoring, while a lightweight **Qwen 2.5 3B** Operator executes rapid MCP tool calls. Both models are able to run locally via Ollama, ensuring functionality under zero Internet connectivity.
 
    <div align="center">
-  ![architecture_light2](https://github.com/user-attachments/assets/a485593c-b6e3-488b-9162-067c29469abe)
+  <img width="2726" height="1568" alt="architecture_light2" src="https://github.com/user-attachments/assets/d54945fd-4e74-4e24-8c40-d9642acf7552" />
 
    </div>
 
