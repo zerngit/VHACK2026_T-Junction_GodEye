@@ -1,0 +1,38 @@
+{
+  "ticks": [
+    {
+      "tick": 1,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 1,
+          "d_1": 2,
+          "d_2": 5,
+          "d_3": 3
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "Moving to scan unscanned grid in Sector 1",
+          "action": "move_and_scan(d_0, x=3, y=11)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "Scanning unvisited grid in the assigned sector",
+          "action": "move_and_scan(d_1, x=8, y=8)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "Starting scan from the top-left corner of the assigned sector",
+          "action": "move_and_scan(d_2, x=8, y=0)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "Starting movement to the lower left corner of the assigned sector",
+          "action": "wait(d_3, x=16, y=8)"
+        }
+      ]
+    }
+  ]
+}

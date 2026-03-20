@@ -1,0 +1,14 @@
+mcp[cli]
+mesa==1.2.1
+python-dotenv
+ollama
+langchain
+langchain-community
+langchain_core
+langchain_openai
+litellm
+openai
+openrouter
+streamlit
+pandas
+plotly

@@ -1,0 +1,9 @@
+[VOTING T000]  ⚠ 🔴 d_0 found idle / disabled.
+[VOTING T000] Tick 1/5: d_0 is currently idle/disabled.
+[VOTING T001] Tick 2/5: reasoning collected from active drones.
+[VOTING T001]   d_1 reasoning: Sector 1 is selected as fallback rescue route for idle recovery.
+[VOTING T001]   d_2 reasoning: Sector 1 is selected as fallback rescue route for idle recovery.
+[VOTING T001]   d_3 reasoning: Sector 1 is selected as fallback rescue route for idle recovery.
+[VOTING T002] Tick 3/5: vote tally completed -> {1: 3}
+[VOTING T003] Tick 4/5: action determined -> move_and_scan(d_0, 2, 10)
+[VOTING T004] Tick 5/5: idle drone executed recovery action -> {'new_pos': [2, 3], 'battery': 92.0, 'arrived': False, 'steps_taken': 3, 'scanned_cells': 25, 'coordinate': [2, 3], 'thermal_intensity': 0.25, 'survivors_found': [{'id': 'surv_10', 'pos': [3, 3]}, {'id': 'surv_2', 'pos': [3, 4]}], 'filter_result': {'verification_status': 'CONFIRMED', 'human_detected': True, 'confirmed_count': 2, 'confirmed_survivors': [{'id': 'surv_10', 'pos': [3, 3]}, {'id': 'surv_2', 'pos': [3, 4]}], 'threshold': 0.8, 'intensity': 0.8, 'coordinate': [2, 3], 'scan_center': [2, 3]}}

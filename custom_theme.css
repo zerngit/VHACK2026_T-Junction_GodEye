@@ -1,0 +1,165 @@
+/* Light Theme UI Restyling */
+body {
+    background-color: #f6f9fc !important;
+    color: #334155 !important;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif !important;
+}
+
+/* Sidebar Overrides */
+.sidebar {
+    background-color: #ffffff !important;
+    border-right: 1px solid #e2e8f0 !important;
+    padding: 24px !important;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* Control Labels */
+label, .control-label {
+    color: #1e293b !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+    margin-top: 16px !important;
+    margin-bottom: 8px !important;
+    display: block !important;
+}
+
+/* Form controls (Selects, inputs) */
+select.form-control, select.form-select, input.form-control {
+    background-color: #ffffff !important;
+    border: 2px solid #e2e8f0 !important;
+    border-radius: 8px !important;
+    color: #475569 !important;
+    padding: 8px 12px !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    box-shadow: none !important;
+    transition: all 0.2s ease !important;
+    appearance: none !important;
+}
+
+select.form-control:focus, input.form-control:focus {
+    border-color: #14b8a6 !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.15) !important;
+}
+
+/* Buttons (Run / Step / Reset / Play) */
+.btn {
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    padding: 10px 16px !important;
+    transition: all 0.2s ease !important;
+    margin-bottom: 8px !important;
+    width: 100% !important;
+    text-align: center !important;
+    border: none !important;
+}
+
+/* Start/Stop */
+.btn-success, #play-pause {
+    background-color: #14b8a6 !important; /* Teal */
+    color: #ffffff !important;
+    box-shadow: 0 2px 4px rgba(20, 184, 166, 0.2) !important;
+}
+.btn-success:hover, #play-pause:hover {
+    background-color: #0d9488 !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Step */
+.btn-primary, #step {
+    background-color: #0ea5e9 !important; /* Blue */
+    color: #ffffff !important;
+    box-shadow: 0 2px 4px rgba(14, 165, 233, 0.2) !important;
+}
+.btn-primary:hover, #step:hover {
+    background-color: #0284c7 !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Reset / Default */
+.btn-default, .btn-secondary, #reset {
+    background-color: #f1f5f9 !important;
+    color: #475569 !important;
+}
+.btn-default:hover, .btn-secondary:hover, #reset:hover {
+    background-color: #e2e8f0 !important;
+    color: #1e293b !important;
+}
+
+/* Sliders */
+input[type="range"] {
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    width: 100% !important;
+    height: 6px !important;
+    background: #e2e8f0 !important;
+    border-radius: 4px !important;
+    outline: none !important;
+    margin: 12px 0 !important;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50% !important;
+    background: #14b8a6 !important;
+    cursor: pointer !important;
+    box-shadow: 0 2px 5px rgba(20, 184, 166, 0.3) !important;
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    border: 2px solid #ffffff !important;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.15) !important;
+}
+
+/* Checkboxes / Switches */
+input[type="checkbox"] {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    width: 44px !important;
+    height: 24px !important;
+    background: #e2e8f0 !important;
+    border-radius: 24px !important;
+    position: relative !important;
+    cursor: pointer !important;
+    outline: none !important;
+    transition: background 0.3s ease !important;
+    vertical-align: middle !important;
+    margin-right: 10px !important;
+}
+
+input[type="checkbox"]::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 2px !important;
+    left: 2px !important;
+    width: 20px !important;
+    height: 20px !important;
+    background: #ffffff !important;
+    border-radius: 50% !important;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+input[type="checkbox"]:checked {
+    background: #14b8a6 !important;
+}
+
+input[type="checkbox"]:checked::after {
+    transform: translateX(20px) !important;
+}
+
+/* Headers */
+h1, h2, h3, .sidebar h1 {
+    color: #0f172a !important;
+    font-weight: 700 !important;
+}
+
+/* Fix FPS slider specifically */
+#fps-slider {
+    padding: 0 !important;
+}

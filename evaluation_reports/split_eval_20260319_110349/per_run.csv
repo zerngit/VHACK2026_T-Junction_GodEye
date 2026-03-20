@@ -1,0 +1,4 @@
+timestamp,split,scenario,scenario_seed,run_index,run_seed,simulate_ai,max_ticks,final_tick,success,fhc_ticks,fhc_seconds,coverage_pct,area_coverage_rate,survivors_found,survivors_total,survivor_detected_rate,exploration_score,redundancy_penalty,dispersion_penalty,avg_battery,tool_total,tool_valid,tool_call_accuracy,discovery_events,discovery_latency_ticks,discovery_latency_seconds
+2026-03-19T11:03:46.582975,train,B: Two hotspots,2026,0,2026,False,120,119,True,1.0,0.009,82.55,0.6879,11,12,91.67,23.05,0.5778,0.8026,3.75,1125,1125,100.0,4,0.0,0.0
+2026-03-19T11:03:48.723322,train,C: Perimeter scattered,7,0,7,False,120,119,False,1.0,0.007,72.66,0.6055,9,12,75.0,21.8,0.5745,0.4956,0.75,491,491,100.0,4,0.0,0.001
+2026-03-19T11:03:49.041000,test,D: City with high buildings,42,0,42,False,120,9,True,1.0,0.008,77.86,7.7865,12,12,100.0,20.22,0.5625,0.8289,20.25,130,130,100.0,4,0.0,0.001

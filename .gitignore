@@ -1,0 +1,13 @@
+*.log
+.env
+montage/
+venv/
+__pycache__/
+*.pyc
+.python-version
+.vscode
+!requirements.txt
+patch_sys_path.py
+patch_workspace_dir.py
+refactor_imports.py
+archieve/

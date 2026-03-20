@@ -1,0 +1,801 @@
+{
+  "generated_at": "2026-03-20T09:08:49.388211",
+  "run_id": "20260320_090423_a__palu_city",
+  "source": "mesa_drone_rescue_langgraph_trace",
+  "split": "train",
+  "scenario": "A: Palu city",
+  "scenario_seed": 1337,
+  "models": {
+    "commander": "qwen/qwen3-14b",
+    "operator": "qwen/qwen-2.5-7b-instruct"
+  },
+  "formula": {
+    "exploration_score": "100 * (0.60*coverage_norm - 0.25*redundancy_penalty - 0.15*dispersion_penalty)",
+    "tool_call_accuracy": "100 * tool_valid / max(1, tool_total)",
+    "area_coverage_rate": "coverage_pct / max(1, tick+1)",
+    "survivor_detected_rate": "100 * survivors_found / max(1, survivors_total)"
+  },
+  "latest_snapshot": {
+    "tick": 5,
+    "elapsed_seconds": 266.053,
+    "split": "train",
+    "scenario": "A: Palu city",
+    "survivors_found": 10,
+    "survivors_total": 12,
+    "fhc_ticks": 1,
+    "fhc_seconds": 10.472,
+    "coverage_pct": 70.57,
+    "area_coverage_rate": 11.7622,
+    "survivor_detected_rate": 83.33,
+    "sectors_done": 0,
+    "avg_battery": 54.5,
+    "drone_wait_count": 0,
+    "total_scans": 48,
+    "duplicate_scans": 27,
+    "redundancy_penalty": 0.5625,
+    "dispersion_norm": 0.2939,
+    "dispersion_penalty": 0.7061,
+    "exploration_score": 17.69,
+    "tool_total": 78,
+    "tool_valid": 78,
+    "tool_invalid_schema": 0,
+    "tool_invalid_logic": 0,
+    "tool_execution_failed": 0,
+    "tool_call_accuracy": 100.0,
+    "discovery_events": 4,
+    "discovery_latency_ticks": 0.0,
+    "discovery_latency_seconds": 6.714
+  },
+  "time_series": [
+    {
+      "tick": 0,
+      "elapsed_seconds": 10.472,
+      "split": "train",
+      "scenario": "A: Palu city",
+      "survivors_found": 2,
+      "survivors_total": 12,
+      "fhc_ticks": 1,
+      "fhc_seconds": 10.472,
+      "coverage_pct": 23.7,
+      "area_coverage_rate": 23.6979,
+      "survivor_detected_rate": 16.67,
+      "sectors_done": 0,
+      "avg_battery": 92.5,
+      "drone_wait_count": 0,
+      "total_scans": 8,
+      "duplicate_scans": 4,
+      "redundancy_penalty": 0.5,
+      "dispersion_norm": 0.5088,
+      "dispersion_penalty": 0.4912,
+      "exploration_score": 0.0,
+      "tool_total": 13,
+      "tool_valid": 13,
+      "tool_invalid_schema": 0,
+      "tool_invalid_logic": 0,
+      "tool_execution_failed": 0,
+      "tool_call_accuracy": 100.0,
+      "discovery_events": 4,
+      "discovery_latency_ticks": 0.0,
+      "discovery_latency_seconds": 6.714
+    },
+    {
+      "tick": 1,
+      "elapsed_seconds": 19.274,
+      "split": "train",
+      "scenario": "A: Palu city",
+      "survivors_found": 4,
+      "survivors_total": 12,
+      "fhc_ticks": 1,
+      "fhc_seconds": 10.472,
+      "coverage_pct": 38.8,
+      "area_coverage_rate": 19.401,
+      "survivor_detected_rate": 33.33,
+      "sectors_done": 0,
+      "avg_battery": 84.5,
+      "drone_wait_count": 0,
+      "total_scans": 16,
+      "duplicate_scans": 8,
+      "redundancy_penalty": 0.5,
+      "dispersion_norm": 0.4035,
+      "dispersion_penalty": 0.5965,
+      "exploration_score": 1.83,
+      "tool_total": 26,
+      "tool_valid": 26,
+      "tool_invalid_schema": 0,
+      "tool_invalid_logic": 0,
+      "tool_execution_failed": 0,
+      "tool_call_accuracy": 100.0,
+      "discovery_events": 4,
+      "discovery_latency_ticks": 0.0,
+      "discovery_latency_seconds": 6.714
+    },
+    {
+      "tick": 2,
+      "elapsed_seconds": 28.689,
+      "split": "train",
+      "scenario": "A: Palu city",
+      "survivors_found": 7,
+      "survivors_total": 12,
+      "fhc_ticks": 1,
+      "fhc_seconds": 10.472,
+      "coverage_pct": 53.12,
+      "area_coverage_rate": 17.7083,
+      "survivor_detected_rate": 58.33,
+      "sectors_done": 0,
+      "avg_battery": 76.75,
+      "drone_wait_count": 0,
+      "total_scans": 24,
+      "duplicate_scans": 12,
+      "redundancy_penalty": 0.5,
+      "dispersion_norm": 0.2325,
+      "dispersion_penalty": 0.7675,
+      "exploration_score": 7.86,
+      "tool_total": 39,
+      "tool_valid": 39,
+      "tool_invalid_schema": 0,
+      "tool_invalid_logic": 0,
+      "tool_execution_failed": 0,
+      "tool_call_accuracy": 100.0,
+      "discovery_events": 4,
+      "discovery_latency_ticks": 0.0,
+      "discovery_latency_seconds": 6.714
+    },
+    {
+      "tick": 3,
+      "elapsed_seconds": 37.601,
+      "split": "train",
+      "scenario": "A: Palu city",
+      "survivors_found": 8,
+      "survivors_total": 12,
+      "fhc_ticks": 1,
+      "fhc_seconds": 10.472,
+      "coverage_pct": 53.91,
+      "area_coverage_rate": 13.4766,
+      "survivor_detected_rate": 66.67,
+      "sectors_done": 0,
+      "avg_battery": 70.25,
+      "drone_wait_count": 1,
+      "total_scans": 32,
+      "duplicate_scans": 19,
+      "redundancy_penalty": 0.5938,
+      "dispersion_norm": 0.3158,
+      "dispersion_penalty": 0.6842,
+      "exploration_score": 7.24,
+      "tool_total": 52,
+      "tool_valid": 52,
+      "tool_invalid_schema": 0,
+      "tool_invalid_logic": 0,
+      "tool_execution_failed": 0,
+      "tool_call_accuracy": 100.0,
+      "discovery_events": 4,
+      "discovery_latency_ticks": 0.0,
+      "discovery_latency_seconds": 6.714
+    },
+    {
+      "tick": 4,
+      "elapsed_seconds": 255.785,
+      "split": "train",
+      "scenario": "A: Palu city",
+      "survivors_found": 8,
+      "survivors_total": 12,
+      "fhc_ticks": 1,
+      "fhc_seconds": 10.472,
+      "coverage_pct": 59.38,
+      "area_coverage_rate": 11.875,
+      "survivor_detected_rate": 66.67,
+      "sectors_done": 0,
+      "avg_battery": 62.25,
+      "drone_wait_count": 0,
+      "total_scans": 40,
+      "duplicate_scans": 23,
+      "redundancy_penalty": 0.575,
+      "dispersion_norm": 0.3421,
+      "dispersion_penalty": 0.6579,
+      "exploration_score": 11.38,
+      "tool_total": 65,
+      "tool_valid": 65,
+      "tool_invalid_schema": 0,
+      "tool_invalid_logic": 0,
+      "tool_execution_failed": 0,
+      "tool_call_accuracy": 100.0,
+      "discovery_events": 4,
+      "discovery_latency_ticks": 0.0,
+      "discovery_latency_seconds": 6.714
+    },
+    {
+      "tick": 5,
+      "elapsed_seconds": 266.053,
+      "split": "train",
+      "scenario": "A: Palu city",
+      "survivors_found": 10,
+      "survivors_total": 12,
+      "fhc_ticks": 1,
+      "fhc_seconds": 10.472,
+      "coverage_pct": 70.57,
+      "area_coverage_rate": 11.7622,
+      "survivor_detected_rate": 83.33,
+      "sectors_done": 0,
+      "avg_battery": 54.5,
+      "drone_wait_count": 0,
+      "total_scans": 48,
+      "duplicate_scans": 27,
+      "redundancy_penalty": 0.5625,
+      "dispersion_norm": 0.2939,
+      "dispersion_penalty": 0.7061,
+      "exploration_score": 17.69,
+      "tool_total": 78,
+      "tool_valid": 78,
+      "tool_invalid_schema": 0,
+      "tool_invalid_logic": 0,
+      "tool_execution_failed": 0,
+      "tool_call_accuracy": 100.0,
+      "discovery_events": 4,
+      "discovery_latency_ticks": 0.0,
+      "discovery_latency_seconds": 6.714
+    }
+  ],
+  "tool_history": [
+    {
+      "tick": 0,
+      "tool": "discover_drones",
+      "drone_id": null,
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 0,
+      "tool": "move_to",
+      "drone_id": "d_0",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 0,
+      "tool": "thermal_scan",
+      "drone_id": "d_0",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 0,
+      "tool": "move_and_scan",
+      "drone_id": "d_0",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 0,
+      "tool": "move_to",
+      "drone_id": "d_1",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 0,
+      "tool": "thermal_scan",
+      "drone_id": "d_1",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 0,
+      "tool": "move_and_scan",
+      "drone_id": "d_1",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 0,
+      "tool": "move_to",
+      "drone_id": "d_2",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 0,
+      "tool": "thermal_scan",
+      "drone_id": "d_2",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 0,
+      "tool": "move_and_scan",
+      "drone_id": "d_2",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 0,
+      "tool": "move_to",
+      "drone_id": "d_3",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 0,
+      "tool": "thermal_scan",
+      "drone_id": "d_3",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 0,
+      "tool": "move_and_scan",
+      "drone_id": "d_3",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 1,
+      "tool": "discover_drones",
+      "drone_id": null,
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 1,
+      "tool": "move_to",
+      "drone_id": "d_0",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 1,
+      "tool": "thermal_scan",
+      "drone_id": "d_0",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 1,
+      "tool": "move_and_scan",
+      "drone_id": "d_0",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 1,
+      "tool": "move_to",
+      "drone_id": "d_1",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 1,
+      "tool": "thermal_scan",
+      "drone_id": "d_1",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 1,
+      "tool": "move_and_scan",
+      "drone_id": "d_1",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 1,
+      "tool": "move_to",
+      "drone_id": "d_2",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 1,
+      "tool": "thermal_scan",
+      "drone_id": "d_2",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 1,
+      "tool": "move_and_scan",
+      "drone_id": "d_2",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 1,
+      "tool": "move_to",
+      "drone_id": "d_3",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 1,
+      "tool": "thermal_scan",
+      "drone_id": "d_3",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 1,
+      "tool": "move_and_scan",
+      "drone_id": "d_3",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 2,
+      "tool": "discover_drones",
+      "drone_id": null,
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 2,
+      "tool": "move_to",
+      "drone_id": "d_0",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 2,
+      "tool": "thermal_scan",
+      "drone_id": "d_0",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 2,
+      "tool": "move_and_scan",
+      "drone_id": "d_0",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 2,
+      "tool": "move_to",
+      "drone_id": "d_1",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 2,
+      "tool": "thermal_scan",
+      "drone_id": "d_1",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 2,
+      "tool": "move_and_scan",
+      "drone_id": "d_1",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 2,
+      "tool": "move_to",
+      "drone_id": "d_2",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 2,
+      "tool": "thermal_scan",
+      "drone_id": "d_2",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 2,
+      "tool": "move_and_scan",
+      "drone_id": "d_2",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 2,
+      "tool": "move_to",
+      "drone_id": "d_3",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 2,
+      "tool": "thermal_scan",
+      "drone_id": "d_3",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 2,
+      "tool": "move_and_scan",
+      "drone_id": "d_3",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 3,
+      "tool": "discover_drones",
+      "drone_id": null,
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 3,
+      "tool": "move_to",
+      "drone_id": "d_0",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 3,
+      "tool": "thermal_scan",
+      "drone_id": "d_0",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 3,
+      "tool": "move_and_scan",
+      "drone_id": "d_0",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 3,
+      "tool": "move_to",
+      "drone_id": "d_1",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 3,
+      "tool": "thermal_scan",
+      "drone_id": "d_1",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 3,
+      "tool": "move_and_scan",
+      "drone_id": "d_1",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 3,
+      "tool": "move_to",
+      "drone_id": "d_2",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 3,
+      "tool": "thermal_scan",
+      "drone_id": "d_2",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 3,
+      "tool": "move_and_scan",
+      "drone_id": "d_2",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 3,
+      "tool": "move_to",
+      "drone_id": "d_3",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 3,
+      "tool": "thermal_scan",
+      "drone_id": "d_3",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 3,
+      "tool": "move_and_scan",
+      "drone_id": "d_3",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 4,
+      "tool": "discover_drones",
+      "drone_id": null,
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 4,
+      "tool": "move_to",
+      "drone_id": "d_0",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 4,
+      "tool": "thermal_scan",
+      "drone_id": "d_0",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 4,
+      "tool": "move_and_scan",
+      "drone_id": "d_0",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 4,
+      "tool": "move_to",
+      "drone_id": "d_1",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 4,
+      "tool": "thermal_scan",
+      "drone_id": "d_1",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 4,
+      "tool": "move_and_scan",
+      "drone_id": "d_1",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 4,
+      "tool": "move_to",
+      "drone_id": "d_2",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 4,
+      "tool": "thermal_scan",
+      "drone_id": "d_2",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 4,
+      "tool": "move_and_scan",
+      "drone_id": "d_2",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 4,
+      "tool": "move_to",
+      "drone_id": "d_3",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 4,
+      "tool": "thermal_scan",
+      "drone_id": "d_3",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 4,
+      "tool": "move_and_scan",
+      "drone_id": "d_3",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 5,
+      "tool": "discover_drones",
+      "drone_id": null,
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 5,
+      "tool": "move_to",
+      "drone_id": "d_0",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 5,
+      "tool": "thermal_scan",
+      "drone_id": "d_0",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 5,
+      "tool": "move_and_scan",
+      "drone_id": "d_0",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 5,
+      "tool": "move_to",
+      "drone_id": "d_1",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 5,
+      "tool": "thermal_scan",
+      "drone_id": "d_1",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 5,
+      "tool": "move_and_scan",
+      "drone_id": "d_1",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 5,
+      "tool": "move_to",
+      "drone_id": "d_2",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 5,
+      "tool": "thermal_scan",
+      "drone_id": "d_2",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 5,
+      "tool": "move_and_scan",
+      "drone_id": "d_2",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 5,
+      "tool": "move_to",
+      "drone_id": "d_3",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 5,
+      "tool": "thermal_scan",
+      "drone_id": "d_3",
+      "syntax_ok": true,
+      "logical_ok": true
+    },
+    {
+      "tick": 5,
+      "tool": "move_and_scan",
+      "drone_id": "d_3",
+      "syntax_ok": true,
+      "logical_ok": true
+    }
+  ],
+  "train_test_policy": {
+    "train": [
+      "A: Center quake (clustered)",
+      "B: Edge quake (scattered)",
+      "C: North-East quake (line)"
+    ],
+    "test": [
+      "D: City with high buildings",
+      "E: City with buildings (all low)"
+    ]
+  },
+  "files": {
+    "tick_jsonl": "C:\\Users\\60115\\OneDrive\\Desktop\\stalk\\vhack2\\V-Hack\\controllers\\metrics_stream\\metrics_ticks_20260320_090423_a__palu_city.jsonl",
+    "summary_latest": "C:\\Users\\60115\\OneDrive\\Desktop\\stalk\\vhack2\\V-Hack\\controllers\\metrics_stream\\summary_latest.json",
+    "summary_run": "C:\\Users\\60115\\OneDrive\\Desktop\\stalk\\vhack2\\V-Hack\\controllers\\metrics_stream\\summary_20260320_090423_a__palu_city.json"
+  }
+}

@@ -1,0 +1,1229 @@
+{
+  "ticks": [
+    {
+      "tick": 1,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 1,
+          "d_1": 2,
+          "d_2": 5,
+          "d_3": 3
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "Moving to scan the unscanned grid within the assigned sector",
+          "action": "move_and_scan(d_0, x=3, y=10)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "Centering scan in assigned sector",
+          "action": "move_and_scan(d_1, x=12, y=12)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "Start scanning from the lower left corner of the assigned sector",
+          "action": "move_and_scan(d_2, x=8, y=0)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "Scanning the unvisited grid at (17,13) to continue coverage of Sector 3",
+          "action": "move_and_scan(d_3, x=17, y=13)"
+        }
+      ]
+    },
+    {
+      "tick": 2,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 2,
+          "d_1": 5,
+          "d_2": 3,
+          "d_3": 1
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "Moving to scan the central area of the assigned sector",
+          "action": "move_and_scan(d_0, x=12, y=10)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "Moving to scan the unexplored grid within the assigned sector",
+          "action": "move_and_scan(d_1, x=12, y=4)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "Scanning assigned sector within efficient range",
+          "action": "move_and_scan(d_2, x=17, y=11)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "Moving to scan unexplored grid in the assigned sector",
+          "action": "move_and_scan(d_3, x=3, y=14)"
+        }
+      ]
+    },
+    {
+      "tick": 3,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 2,
+          "d_1": 5,
+          "d_2": 3,
+          "d_3": 1
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "Moving to scan an uncharted area within the assigned sector",
+          "action": "move_and_scan(d_0, x=10, y=10)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "Start scanning from the lower left corner of the assigned sector",
+          "action": "move_and_scan(d_1, x=8, y=0)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "Scanning uncharted area within assigned sector",
+          "action": "move_and_scan(d_2, x=17, y=11)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "Moving to scan an unscanned grid within the assigned sector",
+          "action": "move_and_scan(d_3, x=5, y=12)"
+        }
+      ]
+    },
+    {
+      "tick": 4,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 1,
+          "d_1": 3,
+          "d_2": 4,
+          "d_3": 6
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "Move to and scan the critical unscanned grid in the assigned sector",
+          "action": "move_and_scan(d_0, x=7, y=15)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "Moving to scan unexplored grid within assigned sector",
+          "action": "move_and_scan(d_1, x=17, y=11)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "Moving to scan unexplored grid within assigned sector",
+          "action": "move_and_scan(d_2, x=3, y=1)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "Repositioning to start assigned sector scan",
+          "action": "move_and_scan(d_3, x=14, y=12)"
+        }
+      ]
+    },
+    {
+      "tick": 5,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 3,
+          "d_1": 5,
+          "d_2": 4,
+          "d_3": 1
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "Proceeding to center of assigned sector for initial scan",
+          "action": "move_and_scan(d_0, x=17, y=13)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "Scanning uncharted areas within the assigned sector",
+          "action": "move_and_scan(d_1, x=12, y=2)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "Current position is optimal for initiating scan in assigned sector",
+          "action": "move_and_scan(d_2, x=6, y=9)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "Proceeding to the edge of the assigned sector for comprehensive scanning",
+          "action": "move_and_scan(d_3, x=7, y=15)"
+        }
+      ]
+    },
+    {
+      "tick": 6,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 3,
+          "d_1": 6,
+          "d_2": 4,
+          "d_3": 5
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "Moving to the edge of the assigned sector to begin scanning",
+          "action": "move_and_scan(d_0, x=16, y=8)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "Moving to scan unscanned grid within assigned sector",
+          "action": "move_and_scan(d_1, x=17, y=2)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "Scanning uncharted area within assigned sector",
+          "action": "move_and_scan(d_2, x=3, y=6)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "Moving to scan an uncharted area within the assigned sector",
+          "action": "move_and_scan(d_3, x=12, y=4)"
+        }
+      ]
+    },
+    {
+      "tick": 7,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 3,
+          "d_1": 5,
+          "d_2": 1,
+          "d_3": 4
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "Start scanning from the lowest unvisited grid in the assigned sector",
+          "action": "move_and_scan(d_0, x=16, y=8)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "Scanning unexplored area within assigned sector",
+          "action": "move_and_scan(d_1, x=10, y=3)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "Proceeding to scan the unassigned grid in the top-right corner of the assigned sector.",
+          "action": "move_and_scan(d_2, x=7, y=15)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "Scanning unexplored area within the assigned sector",
+          "action": "move_and_scan(d_3, x=4, y=4)"
+        }
+      ]
+    },
+    {
+      "tick": 8,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 3,
+          "d_1": 5,
+          "d_2": 1,
+          "d_3": 4
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "Continuing scan of assigned sector",
+          "action": "move_and_scan(d_0, x=17, y=9)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "Scanning uncharted area within assigned sector",
+          "action": "move_and_scan(d_1, x=13, y=2)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "Scanning assigned sector within the optimal range",
+          "action": "move_and_scan(d_2, x=4, y=10)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "Moving to the boundary of the assigned sector for thorough scanning",
+          "action": "move_and_scan(d_3, x=7, y=7)"
+        }
+      ]
+    },
+    {
+      "tick": 9,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 3,
+          "d_1": 5,
+          "d_2": 1,
+          "d_3": 4
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "Moving to the center of the assigned sector for optimal scanning coverage",
+          "action": "move_and_scan(d_0, x=18, y=10)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "Moving to scan the unexplored area in the assigned sector",
+          "action": "move_and_scan(d_1, x=10, y=1)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "Moving to scan the unexplored area in the assigned sector",
+          "action": "move_and_scan(d_2, x=6, y=11)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "Scanning unscanned grid within the assigned sector",
+          "action": "move_and_scan(d_3, x=4, y=4)"
+        }
+      ]
+    },
+    {
+      "tick": 10,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 1,
+          "d_1": 4,
+          "d_2": 6,
+          "d_3": 3
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "Moving towards the boundary of the assigned sector for scanning",
+          "action": "move_and_scan(d_0, x=7, y=10)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "Scanning unexplored grid within assigned sector",
+          "action": "move_and_scan(d_1, x=10, y=2)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "Moving to scan an unexplored grid in the assigned sector",
+          "action": "move_and_scan(d_2, x=18, y=4)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "Starting movement towards the assigned sector",
+          "action": "move_and_scan(d_3, x=4, y=4)"
+        }
+      ]
+    },
+    {
+      "tick": 11,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 1,
+          "d_1": 3,
+          "d_2": 6,
+          "d_3": 4
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "low_battery : Battery at 24.0% is below 30% threshold, and drone is not at base",
+          "action": "recall_to_base(d_0)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "low_battery : Battery at 24.0% is below 30% threshold, and drone is not at base",
+          "action": "recall_to_base(d_1)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "low_battery : Battery at 24.0% is below 30% threshold, and drone is not at base",
+          "action": "recall_to_base(d_2)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "low_battery : Battery at 27.0% is below 30% threshold, and drone is not at base",
+          "action": "recall_to_base(d_3)"
+        }
+      ]
+    },
+    {
+      "tick": 12,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 3,
+          "d_1": 4,
+          "d_2": 1,
+          "d_3": 4
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "low_battery : Battery at 21.0% is below 30% threshold, and drone is not at base",
+          "action": "recall_to_base(d_0)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "low_battery : Battery at 21.0% is below 30% threshold, and drone is not at base",
+          "action": "recall_to_base(d_1)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "low_battery : Battery at 21.0% is below 30% threshold, and drone is not at base",
+          "action": "recall_to_base(d_2)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "low_battery : Battery at 24.0% is below 30% threshold, and drone is not at base",
+          "action": "recall_to_base(d_3)"
+        }
+      ]
+    },
+    {
+      "tick": 13,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 1,
+          "d_1": 4,
+          "d_2": 3,
+          "d_3": 4
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "low_battery : Battery at 18.0% is below 30% threshold, and drone is not at base",
+          "action": "recall_to_base(d_0)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "low_battery : Battery at 18.0% is below 30% threshold, and drone is not at base",
+          "action": "recall_to_base(d_1)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "low_battery : Battery at 18.0% is below 30% threshold, and drone is not at base",
+          "action": "recall_to_base(d_2)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "charge_at_base : Battery at 23.0% is below 20% threshold, but drone is at base and can recharge",
+          "action": "charge_drone(d_3)"
+        }
+      ]
+    },
+    {
+      "tick": 14,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 1,
+          "d_1": 4,
+          "d_2": 3,
+          "d_3": 4
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "charge_at_base : Battery at 16.0% is below 20% threshold, but drone is at base and can recharge",
+          "action": "charge_drone(d_0)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "low_battery : Battery at 15.0% is below 30% threshold, and drone is not at base",
+          "action": "recall_to_base(d_1)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "charge_at_base : Battery at 15.0% is below 20% threshold, but drone is at base and can recharge",
+          "action": "charge_drone(d_2)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "Scanning the first unscanned grid in the assigned sector",
+          "action": "move_and_scan(d_3, x=1, y=0)"
+        }
+      ]
+    },
+    {
+      "tick": 15,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 1,
+          "d_1": 4,
+          "d_2": 1,
+          "d_3": 4
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "Scanning specific unscanned grid within the Assigned Sector",
+          "action": "move_and_scan(d_0, x=0, y=8)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "charge_at_base : Battery at 14.0% is below 20% threshold, but drone is at base and can recharge",
+          "action": "charge_drone(d_1)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "Scanning grid [4,0] in Sector 1",
+          "action": "move_and_scan(d_2, x=4, y=0)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "Scanning unscanned grids in the assigned sector",
+          "action": "move_and_scan(d_3, x=4, y=0)"
+        }
+      ]
+    },
+    {
+      "tick": 16,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 1,
+          "d_1": 4,
+          "d_2": 1,
+          "d_3": 4
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "Initiate scan of uncharted grid within assigned sector",
+          "action": "move_and_scan(d_0, x=0, y=3)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "Move to the last unscanned grid in the assigned sector",
+          "action": "move_and_scan(d_1, x=7, y=1)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "Starting scan from the nearest unscanned grid",
+          "action": "move_and_scan(d_2, x=0, y=3)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "Scanning the unscanned grid at [7,0] within the assigned sector.",
+          "action": "move_and_scan(d_3, x=7, y=0)"
+        }
+      ]
+    },
+    {
+      "tick": 17,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 1,
+          "d_1": 4,
+          "d_2": 6,
+          "d_3": 5
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "Moving to scan the closest unscanned grid in the assigned sector",
+          "action": "move_and_scan(d_0, x=0, y=3)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "Scanning the nearest unscanned grid in the assigned sector",
+          "action": "move_and_scan(d_1, x=7, y=3)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "Initiating scan from nearest unscanned grid within the assigned sector",
+          "action": "move_and_scan(d_2, x=0, y=3)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "Scanning unscanned grid in Sector 5",
+          "action": "move_and_scan(d_3, x=8, y=3)"
+        }
+      ]
+    },
+    {
+      "tick": 18,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 1,
+          "d_1": 6,
+          "d_2": 3,
+          "d_3": 1
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "Scanning the grid at [1,12] as it is part of the assigned sector and unscanned.",
+          "action": "move_and_scan(d_0, x=1, y=12)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "Scanning grid [20,0] which is within the assigned sector and unscanned",
+          "action": "move_and_scan(d_1, x=20, y=0)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "Starting scanning from the top-left corner of the assigned sector",
+          "action": "move_and_scan(d_2, x=16, y=8)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "Scanning nearest unscanned grid within assigned sector",
+          "action": "move_and_scan(d_3, x=0, y=3)"
+        }
+      ]
+    },
+    {
+      "tick": 19,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 5,
+          "d_1": 6,
+          "d_2": 1,
+          "d_3": 3
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "Scanning specific unscanned grid within the assigned sector",
+          "action": "move_and_scan(d_0, x=11, y=5)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "Scanning an unscanned grid within the assigned sector",
+          "action": "move_and_scan(d_1, x=20, y=0)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "Begin scanning assigned sector",
+          "action": "wait(d_2, x=3, y=8)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "Avoiding障碍物并进入未扫描区域",
+          "action": "move_and_scan(d_3, x=6, y=9)"
+        }
+      ]
+    },
+    {
+      "tick": 20,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 1,
+          "d_1": 6,
+          "d_2": 3,
+          "d_3": 2
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "Scanning unscanned grid in Sector 1",
+          "action": "move_and_scan(d_0, x=0, y=3)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "Scanning unscanned grid at [20,0] within assigned sector",
+          "action": "move_and_scan(d_1, x=20, y=0)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "Scanning unscanned grid at [21,8] which is partially within the assigned sector",
+          "action": "move_and_scan(d_2, x=21, y=15)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "Scanning unscanned grid within assigned sector",
+          "action": "move_and_scan(d_3, x=14, y=15)"
+        }
+      ]
+    },
+    {
+      "tick": 21,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 1,
+          "d_1": 6,
+          "d_2": 3,
+          "d_3": 6
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "Scanning unscanned grid in Sector 1",
+          "action": "move_and_scan(d_0, x=0, y=12)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "To begin scanning from the lower left corner of the assigned sector",
+          "action": "move_and_scan(d_1, x=16, y=0)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "Starting scan from the edge of the assigned sector to cover unscanned areas efficiently",
+          "action": "move_and_scan(d_2, x=16, y=11)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "Closest unscanned grid within the assigned sector for efficient scanning",
+          "action": "move_and_scan(d_3, x=20, y=0)"
+        }
+      ]
+    },
+    {
+      "tick": 22,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 1,
+          "d_1": 3,
+          "d_2": 6,
+          "d_3": 2
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "Scanning unscanned grid at [0,3] in Sector 1",
+          "action": "move_and_scan(d_0, x=0, y=3)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "Scanning unscanned grid at [14,15] in Sector 2",
+          "action": "move_and_scan(d_1, x=17, y=15)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "Scanning unscanned grid at sector boundary",
+          "action": "move_and_scan(d_2, x=20, y=0)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "Scanning unscanned grid [14,15] of Sector 2",
+          "action": "move_and_scan(d_3, x=10, y=10)"
+        }
+      ]
+    },
+    {
+      "tick": 23,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 1,
+          "d_1": 6,
+          "d_2": 3,
+          "d_3": 2
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "Scanning unscanned grid at [0,15] in Sector 1",
+          "action": "move_and_scan(d_0, x=0, y=15)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "Initiate scan of unscanned grid at [20,0] within Sector 6",
+          "action": "move_and_scan(d_1, x=20, y=0)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "Scanning specific unscanned grid within the assigned sector",
+          "action": "move_and_scan(d_2, x=21, y=8)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "Move to the edge of the assigned sector to cover unscanned grids",
+          "action": "move_and_scan(d_3, x=14, y=15)"
+        }
+      ]
+    },
+    {
+      "tick": 24,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 1,
+          "d_1": 6,
+          "d_2": 3,
+          "d_3": 2
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "low_battery : Battery at 28.0% is below 30% threshold, and drone is not at base",
+          "action": "recall_to_base(d_0)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "Scanning grid within the assigned sector",
+          "action": "move_and_scan(d_1, x=20, y=6)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "Scanning unscanned grid within the assigned sector",
+          "action": "move_and_scan(d_2, x=21, y=8)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "low_battery : Battery at 22.0% is below 30% threshold, and drone is not at base",
+          "action": "recall_to_base(d_3)"
+        }
+      ]
+    },
+    {
+      "tick": 25,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 1,
+          "d_1": 6,
+          "d_2": 3,
+          "d_3": 2
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "low_battery : Battery at 25.0% is below 30% threshold, and drone is not at base",
+          "action": "recall_to_base(d_0)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "Starting movement to current position within the assigned sector",
+          "action": "wait(d_1, x=20, y=3)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "low_battery : Battery at 28.0% is below 30% threshold, and drone is not at base",
+          "action": "recall_to_base(d_2)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "low_battery : Battery at 19.0% is below 30% threshold, and drone is not at base",
+          "action": "recall_to_base(d_3)"
+        }
+      ]
+    },
+    {
+      "tick": 26,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 1,
+          "d_1": 6,
+          "d_2": 3,
+          "d_3": 2
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "charge_at_base : Battery at 22.0% is below 20% threshold, but drone is at base and can recharge",
+          "action": "charge_drone(d_0)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "Continuing to scan unassigned grid within Sector 6",
+          "action": "move_and_scan(d_1, x=20, y=3)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "low_battery : Battery at 25.0% is below 30% threshold, and drone is not at base",
+          "action": "recall_to_base(d_2)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "low_battery : Battery at 16.0% is below 30% threshold, and drone is not at base",
+          "action": "recall_to_base(d_3)"
+        }
+      ]
+    },
+    {
+      "tick": 27,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 1,
+          "d_1": 6,
+          "d_2": 3,
+          "d_3": 2
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "Move to and scan the first unscanned grid in the assigned sector",
+          "action": "move_and_scan(d_0, x=1, y=15)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "low_battery : Battery at 25.0% is below 30% threshold, and drone is not at base",
+          "action": "recall_to_base(d_1)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "low_battery : Battery at 22.0% is below 30% threshold, and drone is not at base",
+          "action": "recall_to_base(d_2)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "low_battery : Battery at 13.0% is below 30% threshold, and drone is not at base",
+          "action": "recall_to_base(d_3)"
+        }
+      ]
+    },
+    {
+      "tick": 28,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 1,
+          "d_1": 6,
+          "d_2": 3,
+          "d_3": 2
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "Scanning the first unscanned grid in Sector 1",
+          "action": "move_and_scan(d_0, x=0, y=15)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "charge_at_base : Battery at 22.0% is below 20% threshold, but drone is at base and can recharge",
+          "action": "charge_drone(d_1)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "charge_at_base : Battery at 21.0% is below 20% threshold, but drone is at base and can recharge",
+          "action": "charge_drone(d_2)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "charge_at_base : Battery at 12.0% is below 20% threshold, but drone is at base and can recharge",
+          "action": "charge_drone(d_3)"
+        }
+      ]
+    },
+    {
+      "tick": 29,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 1,
+          "d_1": 6,
+          "d_2": 3,
+          "d_3": 2
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "Move to and scan the nearest unscanned grid location within the assigned sector.",
+          "action": "move_and_scan(d_0, x=1, y=15)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "Scanning grid [21,6] in Sector 6 as it is unscanned and within the assigned area",
+          "action": "move_and_scan(d_1, x=21, y=6)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "Scanning unscanned grid in Assigned Sector",
+          "action": "move_and_scan(d_2, x=22, y=8)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "Starting scan from the nearest unscanned grid in the assigned sector",
+          "action": "move_and_scan(d_3, x=8, y=15)"
+        }
+      ]
+    },
+    {
+      "tick": 30,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 1,
+          "d_1": 6,
+          "d_2": 3,
+          "d_3": 3
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "Scanning the unscanned grid at [0,15] in the assigned sector",
+          "action": "move_and_scan(d_0, x=0, y=15)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "Scanning grid 21,6 as it is within the assigned sector and adjacent to currently unscanned areas",
+          "action": "move_and_scan(d_1, x=21, y=6)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "Scanning grid [18,10] within the assigned sector 3",
+          "action": "move_and_scan(d_2, x=18, y=10)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "Scanning unscanned grid in Sector 3",
+          "action": "move_and_scan(d_3, x=18, y=14)"
+        }
+      ]
+    },
+    {
+      "tick": 31,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 1,
+          "d_1": 6,
+          "d_2": 3,
+          "d_3": 3
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "Scanning the last unscanned grid in the assigned sector",
+          "action": "move_and_scan(d_0, x=7, y=15)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "Scan remaining unscanned grid in assigned sector",
+          "action": "move_and_scan(d_1, x=23, y=0)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "Scanning unscanned grid in Sector 3",
+          "action": "move_and_scan(d_2, x=14, y=15)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "Scanning uncharted grid in assigned sector",
+          "action": "move_and_scan(d_3, x=17, y=15)"
+        }
+      ]
+    },
+    {
+      "tick": 32,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 1,
+          "d_1": 6,
+          "d_2": 3,
+          "d_3": 3
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "Scanning unscanned grid in assigned sector",
+          "action": "move_and_scan(d_0, x=0, y=15)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "Moving to scan the unscanned grid at [23,9] within the assigned sector",
+          "action": "move_and_scan(d_1, x=17, y=4)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "Scan grid at position [22,9] which is within the assigned sector and unscanned",
+          "action": "move_and_scan(d_2, x=22, y=9)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "Scanning unscanned grid at [22,9] in Sector 3",
+          "action": "move_and_scan(d_3, x=17, y=9)"
+        }
+      ]
+    },
+    {
+      "tick": 33,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 1,
+          "d_1": 6,
+          "d_2": 3,
+          "d_3": 3
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "charge_at_base : Battery at 52.0% is below 20% threshold, but drone is at base and can recharge",
+          "action": "charge_drone(d_0)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "Scanning assigned sector",
+          "action": "move_and_scan(d_1, x=20, y=4)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "Unscanned grid detected in assigned sector",
+          "action": "wait(d_2, x=19, y=10)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "Starting from current position within the assigned sector",
+          "action": "wait(d_3, x=17, y=12)"
+        }
+      ]
+    },
+    {
+      "tick": 34,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 1,
+          "d_1": 6,
+          "d_2": 3,
+          "d_3": 3
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "Scanning closest unscanned grid in Sector 1",
+          "action": "move_and_scan(d_0, x=6, y=15)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "Starting from current position to scan unscanned grids in the assigned sector",
+          "action": "move_and_scan(d_1, x=20, y=4)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "Scanning unscanned grid in assigned sector",
+          "action": "move_and_scan(d_2, x=22, y=9)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "Scanning grid within assigned sector 3",
+          "action": "move_and_scan(d_3, x=22, y=9)"
+        }
+      ]
+    },
+    {
+      "tick": 35,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 1,
+          "d_1": 6,
+          "d_2": 3,
+          "d_3": 3
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "Scanning unscanned grid [6,15] in assigned sector",
+          "action": "move_and_scan(d_0, x=6, y=15)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "Scan the unscanned grid in sector 6",
+          "action": "move_and_scan(d_1, x=23, y=0)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "Scan grid [23,0] as it is within the assigned sector and unscanned",
+          "action": "move_and_scan(d_2, x=23, y=0)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "The closest unscanned grid within the assigned sector is prioritized for scanning.",
+          "action": "move_and_scan(d_3, x=20, y=15)"
+        }
+      ]
+    },
+    {
+      "tick": 36,
+      "commander": {
+        "cot": "Prioritized incomplete sectors and distributed drones without overlap based on current sector coverage and live drone availability.",
+        "action": {
+          "d_0": 3,
+          "d_1": 3,
+          "d_2": 3,
+          "d_3": 3
+        }
+      },
+      "operators": [
+        {
+          "drone_id": "d_0",
+          "cot": "Scan remaining unscanned grid in the sector",
+          "action": "move_and_scan(d_0, x=23, y=15)"
+        },
+        {
+          "drone_id": "d_1",
+          "cot": "Scanning unscanned grid in the assigned sector",
+          "action": "move_and_scan(d_1, x=23, y=15)"
+        },
+        {
+          "drone_id": "d_2",
+          "cot": "To scan the last unscanned grid in the assigned sector",
+          "action": "move_and_scan(d_2, x=23, y=15)"
+        },
+        {
+          "drone_id": "d_3",
+          "cot": "Scan the unscanned grid in Sector 3",
+          "action": "move_and_scan(d_3, x=23, y=15)"
+        }
+      ]
+    }
+  ],
+  "mission_successful": true
+}

@@ -1,0 +1,99 @@
+{
+  "generated_at": "2026-03-20T09:04:22.638002",
+  "run_id": "20260320_090422_a__palu_city",
+  "source": "mesa_drone_rescue_langgraph_trace",
+  "split": "train",
+  "scenario": "A: Palu city",
+  "scenario_seed": 1337,
+  "models": {
+    "commander": "qwen/qwen3-14b",
+    "operator": "qwen/qwen-2.5-7b-instruct"
+  },
+  "formula": {
+    "exploration_score": "100 * (0.60*coverage_norm - 0.25*redundancy_penalty - 0.15*dispersion_penalty)",
+    "tool_call_accuracy": "100 * tool_valid / max(1, tool_total)",
+    "area_coverage_rate": "coverage_pct / max(1, tick+1)",
+    "survivor_detected_rate": "100 * survivors_found / max(1, survivors_total)"
+  },
+  "latest_snapshot": {
+    "tick": 0,
+    "elapsed_seconds": 0.0,
+    "split": "train",
+    "scenario": "A: Palu city",
+    "survivors_found": 0,
+    "survivors_total": 12,
+    "fhc_ticks": -1,
+    "fhc_seconds": -1.0,
+    "coverage_pct": 0.0,
+    "area_coverage_rate": 0.0,
+    "survivor_detected_rate": 0.0,
+    "sectors_done": 0,
+    "avg_battery": 100.0,
+    "drone_wait_count": 4,
+    "total_scans": 0,
+    "duplicate_scans": 0,
+    "redundancy_penalty": 0.0,
+    "dispersion_norm": 0.6667,
+    "dispersion_penalty": 0.3333,
+    "exploration_score": 0.0,
+    "tool_total": 0,
+    "tool_valid": 0,
+    "tool_invalid_schema": 0,
+    "tool_invalid_logic": 0,
+    "tool_execution_failed": 0,
+    "tool_call_accuracy": 0.0,
+    "discovery_events": 0,
+    "discovery_latency_ticks": 0.0,
+    "discovery_latency_seconds": 0.0
+  },
+  "time_series": [
+    {
+      "tick": 0,
+      "elapsed_seconds": 0.0,
+      "split": "train",
+      "scenario": "A: Palu city",
+      "survivors_found": 0,
+      "survivors_total": 12,
+      "fhc_ticks": -1,
+      "fhc_seconds": -1.0,
+      "coverage_pct": 0.0,
+      "area_coverage_rate": 0.0,
+      "survivor_detected_rate": 0.0,
+      "sectors_done": 0,
+      "avg_battery": 100.0,
+      "drone_wait_count": 4,
+      "total_scans": 0,
+      "duplicate_scans": 0,
+      "redundancy_penalty": 0.0,
+      "dispersion_norm": 0.6667,
+      "dispersion_penalty": 0.3333,
+      "exploration_score": 0.0,
+      "tool_total": 0,
+      "tool_valid": 0,
+      "tool_invalid_schema": 0,
+      "tool_invalid_logic": 0,
+      "tool_execution_failed": 0,
+      "tool_call_accuracy": 0.0,
+      "discovery_events": 0,
+      "discovery_latency_ticks": 0.0,
+      "discovery_latency_seconds": 0.0
+    }
+  ],
+  "tool_history": [],
+  "train_test_policy": {
+    "train": [
+      "A: Center quake (clustered)",
+      "B: Edge quake (scattered)",
+      "C: North-East quake (line)"
+    ],
+    "test": [
+      "D: City with high buildings",
+      "E: City with buildings (all low)"
+    ]
+  },
+  "files": {
+    "tick_jsonl": "C:\\Users\\60115\\OneDrive\\Desktop\\stalk\\vhack2\\V-Hack\\controllers\\metrics_stream\\metrics_ticks_20260320_090422_a__palu_city.jsonl",
+    "summary_latest": "C:\\Users\\60115\\OneDrive\\Desktop\\stalk\\vhack2\\V-Hack\\controllers\\metrics_stream\\summary_latest.json",
+    "summary_run": "C:\\Users\\60115\\OneDrive\\Desktop\\stalk\\vhack2\\V-Hack\\controllers\\metrics_stream\\summary_20260320_090422_a__palu_city.json"
+  }
+}

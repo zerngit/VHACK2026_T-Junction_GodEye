@@ -1,0 +1,220 @@
+{
+  "generated_at": "2026-03-19T10:29:15.314624",
+  "config": {
+    "runs_per_scenario": 1,
+    "max_ticks": 120,
+    "simulate_ai": false,
+    "seed_offset": 0
+  },
+  "split_manifest": {
+    "train": [
+      "B: Two hotspots",
+      "C: Perimeter scattered"
+    ],
+    "test": [
+      "D: City with high buildings"
+    ]
+  },
+  "counts": {
+    "total_runs": 3,
+    "train_runs": 2,
+    "test_runs": 1
+  },
+  "train": {
+    "runs": 2,
+    "success_rate": 50.0,
+    "kpis": {
+      "fhc_ticks": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "coverage_pct": {
+        "mean": 77.605,
+        "std": 4.945,
+        "min": 72.66,
+        "max": 82.55
+      },
+      "area_coverage_rate": {
+        "mean": 0.6467,
+        "std": 0.0412,
+        "min": 0.6055,
+        "max": 0.6879
+      },
+      "survivor_detected_rate": {
+        "mean": 83.335,
+        "std": 8.335,
+        "min": 75.0,
+        "max": 91.67
+      },
+      "exploration_score": {
+        "mean": 22.425,
+        "std": 0.625,
+        "min": 21.8,
+        "max": 23.05
+      },
+      "avg_battery": {
+        "mean": 2.25,
+        "std": 1.5,
+        "min": 0.75,
+        "max": 3.75
+      },
+      "tool_call_accuracy": {
+        "mean": 100.0,
+        "std": 0.0,
+        "min": 100.0,
+        "max": 100.0
+      },
+      "discovery_latency_ticks": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      }
+    }
+  },
+  "test": {
+    "runs": 1,
+    "success_rate": 100.0,
+    "kpis": {
+      "fhc_ticks": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "coverage_pct": {
+        "mean": 77.86,
+        "std": 0.0,
+        "min": 77.86,
+        "max": 77.86
+      },
+      "area_coverage_rate": {
+        "mean": 7.7865,
+        "std": 0.0,
+        "min": 7.7865,
+        "max": 7.7865
+      },
+      "survivor_detected_rate": {
+        "mean": 100.0,
+        "std": 0.0,
+        "min": 100.0,
+        "max": 100.0
+      },
+      "exploration_score": {
+        "mean": 20.22,
+        "std": 0.0,
+        "min": 20.22,
+        "max": 20.22
+      },
+      "avg_battery": {
+        "mean": 20.25,
+        "std": 0.0,
+        "min": 20.25,
+        "max": 20.25
+      },
+      "tool_call_accuracy": {
+        "mean": 100.0,
+        "std": 0.0,
+        "min": 100.0,
+        "max": 100.0
+      },
+      "discovery_latency_ticks": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      }
+    }
+  },
+  "per_run": [
+    {
+      "timestamp": "2026-03-19T10:29:13.015259",
+      "split": "train",
+      "scenario": "B: Two hotspots",
+      "scenario_seed": 2026,
+      "run_index": 0,
+      "run_seed": 2026,
+      "simulate_ai": false,
+      "max_ticks": 120,
+      "final_tick": 119,
+      "success": true,
+      "fhc_ticks": 1.0,
+      "fhc_seconds": 0.006,
+      "coverage_pct": 82.55,
+      "area_coverage_rate": 0.6879,
+      "survivors_found": 11,
+      "survivors_total": 12,
+      "survivor_detected_rate": 91.67,
+      "exploration_score": 23.05,
+      "redundancy_penalty": 0.5778,
+      "dispersion_penalty": 0.8026,
+      "avg_battery": 3.75,
+      "tool_total": 1125,
+      "tool_valid": 1125,
+      "tool_call_accuracy": 100.0,
+      "discovery_events": 4,
+      "discovery_latency_ticks": 0.0,
+      "discovery_latency_seconds": 0.001
+    },
+    {
+      "timestamp": "2026-03-19T10:29:14.968980",
+      "split": "train",
+      "scenario": "C: Perimeter scattered",
+      "scenario_seed": 7,
+      "run_index": 0,
+      "run_seed": 7,
+      "simulate_ai": false,
+      "max_ticks": 120,
+      "final_tick": 119,
+      "success": false,
+      "fhc_ticks": 1.0,
+      "fhc_seconds": 0.003,
+      "coverage_pct": 72.66,
+      "area_coverage_rate": 0.6055,
+      "survivors_found": 9,
+      "survivors_total": 12,
+      "survivor_detected_rate": 75.0,
+      "exploration_score": 21.8,
+      "redundancy_penalty": 0.5745,
+      "dispersion_penalty": 0.4956,
+      "avg_battery": 0.75,
+      "tool_total": 491,
+      "tool_valid": 491,
+      "tool_call_accuracy": 100.0,
+      "discovery_events": 4,
+      "discovery_latency_ticks": 0.0,
+      "discovery_latency_seconds": 0.0
+    },
+    {
+      "timestamp": "2026-03-19T10:29:15.314624",
+      "split": "test",
+      "scenario": "D: City with high buildings",
+      "scenario_seed": 42,
+      "run_index": 0,
+      "run_seed": 42,
+      "simulate_ai": false,
+      "max_ticks": 120,
+      "final_tick": 9,
+      "success": true,
+      "fhc_ticks": 1.0,
+      "fhc_seconds": 0.011,
+      "coverage_pct": 77.86,
+      "area_coverage_rate": 7.7865,
+      "survivors_found": 12,
+      "survivors_total": 12,
+      "survivor_detected_rate": 100.0,
+      "exploration_score": 20.22,
+      "redundancy_penalty": 0.5625,
+      "dispersion_penalty": 0.8289,
+      "avg_battery": 20.25,
+      "tool_total": 130,
+      "tool_valid": 130,
+      "tool_call_accuracy": 100.0,
+      "discovery_events": 4,
+      "discovery_latency_ticks": 0.0,
+      "discovery_latency_seconds": 0.001
+    }
+  ]
+}
