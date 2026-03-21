@@ -155,11 +155,11 @@ We built a robust pipeline that continuously evaluates the efficacy and intellig
   - coverage settled at **72.66%**,
   - average battery ended at **0.75%**.
 - This scenario pushes drones to long-perimeter traversals, increasing travel overhead and battery burn before all survivor clusters are revisited.
-- In contrast, **D: City with high buildings** completed quickly in this split snapshot (final tick 9), suggesting scenario geometry and termination timing can dominate split-level success when run count is low.
+- In contrast, **D: City with high buildings** completed quickly in this split snapshot (20-30 ticks), suggesting scenario geometry and termination timing can dominate split-level success when run count is low.
 - Action item to close variance: increase `runs_per_scenario`, then rebalance sector assignment and battery-recall thresholds using per-scenario error slices.
 
 **Benchmark Against Manual Search (Current Status):**
-- Autonomous benchmark currently reports **~40 minutes for 99.7% area coverage** in our simulation workflow.
+- Autonomous benchmark currently reports **~14 minutes for 99.7% area coverage** in our simulation workflow.
 - Human-piloted baseline for the same map and survivor layout is a **pending field benchmark** (to be measured under matched area, crew size, and weather constraints).
 - Our evaluation pipeline is already structured to store this comparison as a side-by-side KPI once manual trial logs are captured.
 
